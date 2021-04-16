@@ -2,7 +2,6 @@ import {
   FETCH_SMURFS_START,
   FETCH_SMURFS_SUCCESS,
   FETCH_SMURFS_FAILURE,
-  ADD_SMURF_FAILURE,
   ADD_SMURF_SUCCESS,
   ADD_SMURF_FAILURE,
 } from '../actions/index';
@@ -13,7 +12,7 @@ export const initialState = {
   error: '',
 };
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_SMURFS_START:
       return {
@@ -48,6 +47,7 @@ export const reducer = (state = initialState, action) => {
       return state;
   }
 };
+export default reducer;
 
 //Task List:
 //=>1. Adds the following state values into the initialState:

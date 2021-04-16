@@ -10,7 +10,7 @@ const SmurfList = (props) => {
   return (
     <div className="listContainer">
       {props.smurf.map((smurf) => {
-        return <Smurf key={smurf.id} smurf={smuf} />;
+        return <Smurf key={smurf.id} smurf={smurf} />;
       })}
     </div>
   );
@@ -18,7 +18,7 @@ const SmurfList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    smurfs: state.smurfs,
+    smurf: state.smurfs,
     isLoading: state.isLoading,
   };
 };
